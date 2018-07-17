@@ -8,10 +8,10 @@ public class JDBCTest {
 
      String user = "root";
      String password = "root";
-     String url = "jdbc:mysql://localhost:3306/mydatabase?useSSL=false&serverTimezone=UTC";
+     String url = "jdbc:mysql://localhost:3306/gree?useSSL=false&serverTimezone=UTC";
      String driver = "com.mysql.cj.jdbc.Driver";
 
-     String tableName = "mytable";
+     String tableName = "user";
      String sqlstr;
      Connection con = null;
      Statement stmt = null;
@@ -28,7 +28,7 @@ public class JDBCTest {
 
          while(rs.next()){
              System.out.println(rs.getInt("id"));
-             System.out.println(rs.getString("name"));
+             System.out.println(rs.getString("username"));
          }
      }catch(ClassNotFoundException e){
          System.out.println("Error! 数据库驱动不存在！");
